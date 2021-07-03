@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
+from user.forms import UserCreationForm
 # Create your views here.
 def user(request):
     return render(request, 'user.html')
