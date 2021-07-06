@@ -1,7 +1,5 @@
 from django.forms import EmailField
-
 from django.utils.translation import ugettext_lazy as _
-
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
