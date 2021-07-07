@@ -1,0 +1,4 @@
+update usr profile to include phone #
+create a list of catagories in which to display items
+create a listing model
+
