@@ -1,3 +1,3 @@
 update usr profile to include phone #
-update listing model to include start and end dates for rental
-
+fix error message when logging in
+fix issue with listing form not showing
