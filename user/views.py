@@ -26,7 +26,7 @@ def user_login(request):
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
         if user is not None:
-            if user.is_active:
+            if form.is_valid:
                 login(request, user)
                 return redirect('homepage')
         else:
@@ -34,6 +34,6 @@ def user_login(request):
             return redirect('login')
     else:
         form = AuthenticationForm()
-        return render(request, 'login.html', {'form': form})
+    return render(request, 'login.html', {'form': form})
 
 
