@@ -1,3 +1,2 @@
 update usr profile to include phone #
-fix error message when logging in
-fix issue with listing form not showing
+update all href links
