@@ -30,14 +30,14 @@
         <!-- Page content-->
       <div class="container">
         <div class="list-group d-inline-flex float-end w-20 h-100 p-4">
-            <a href="#" class="list-group-item list-group-item-action" \>
-              The current link item
+            <a href="http://127.0.0.1:8000/listings" class="list-group-item list-group-item-action" \>
+              View Listings
             </a>
-            <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+            <a href="http://127.0.0.1:8000/listings/new" class="list-group-item list-group-item-action">Create a Listing</a>
             <a href="#" class="list-group-item list-group-item-action">A third link item</a>
             <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
         </div>
-        <div class = "main-content float-start p-4">
+        <div class = "main-content d-flex justify-content-center p-5">
           {% block content%}
           {% endblock %}
         </div>
