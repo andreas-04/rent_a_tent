@@ -5,17 +5,9 @@ from django.forms import ModelForm
 from django.db import models
 from home.models import Listing
 
-#listing_description_choices = (
-#        ("Camping Equipment", "Camping Equipment"),
-#        ("kayaks and Canoes", "kayaks and Canoes"),
-#        ('Fishing Equipment', "Fishing Equipment"),
-#        ('Sports Equipment', "Sports Equipment"),
-#        ('Snow Sports Equipment', "Snow Sports Equipment"),
-#        ('Other', "Other"),
-#        (None, 'Choose a Catagory')
-#)
 
-
+class DateInput(forms.DateInput):
+    input_type = 'date'
 
 
 class ListingForm(ModelForm):
@@ -27,3 +19,6 @@ class ListingForm(ModelForm):
         'available_till',
         'description',
         ]
+        widgets = {
+            'available_till': DateInput()
+        }
