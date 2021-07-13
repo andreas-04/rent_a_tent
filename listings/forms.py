@@ -5,7 +5,6 @@ from django.forms import ModelForm
 from django.db import models
 from home.models import Listing
 
-
 class DateInput(forms.DateInput):
     input_type = 'date'
 
@@ -18,6 +17,7 @@ class ListingForm(ModelForm):
         'catagory', 
         'available_till',
         'description',
+        'price_per_day',
         ]
         widgets = {
             'available_till': DateInput()

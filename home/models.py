@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.core.validators import MaxValueValidator, MinLengthValidator, MinValueValidator
 # Create your models here.
 listing_description_choices = (
         ("Camping Equipment", "Camping Equipment"),
@@ -17,6 +17,7 @@ class Listing(models.Model):
     available_till = models.DateField('Available till')
     description = models.TextField(max_length=2000)
     pub_date = models.DateTimeField('Date published', auto_now = True)
+    price_per_day = models.IntegerField(default=0)
 #   images = models.ImageField //ADD AN IMAGE FIELD FOR MODEL
     def __str__(self):
         return self.title
