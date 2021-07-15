@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from . forms import ListingForm
 from django.conf import settings
+from home.models import Listing
 # Create your views here.
 def listings(request):
     return render(request, 'listings.html')
@@ -17,4 +18,11 @@ def new(request):
 
         else:
             form = ListingForm()
-        return render(request, 'newlisting.html', {'form': form})
+        return render(request, 'new.html', {'form': form})
+
+
+
+def getListingAll(request):
+    listing = Listing.objects.all
+    return render(request, 'all.html', {"listing":listing} )
+
