@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from user.forms import UserCreationForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
+from django.contrib.auth.models import User
 # Create your views here.
 def user(request):
     return render(request, 'user.html')
@@ -40,4 +41,8 @@ def user_login(request):
 def logout_view(request):
     logout(request)
     return redirect('login')
+
+def getUserProfile(request, username):
+    user = User.objects.get(username=username)
+    return render(request, 'profile.html', {"user":user})
 
