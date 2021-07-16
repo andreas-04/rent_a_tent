@@ -1,17 +1,18 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 
-
-{% block content %}
-<div>
+<div class="row">
   {% for listings in listing %}
-  <div>
-    {{ listings.title  }}
-    {{ listings.catagory  }}
-    {{ listings.available_till }}
-    {{ listings.pub_date  }}
-    {{ listings.cost  }}
-    {{listings.description }}
+  <div class="col">
+    <div class="card" style="width: 18rem">
+      <div class="card-body">
+        <h4 class="card-title">{{ listings.title }}</h4>
+
+        <h6 class="card-subtitle mb-2 text-muted">{{ listings.catagory }}</h6>
+        <p class="card-text">{{listings.description }}</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
   </div>
   {% endfor %}
 </div>
