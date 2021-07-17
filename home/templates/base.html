@@ -17,9 +17,14 @@
                 <a class="navbar-brand" href="http://127.0.0.1:8000">Rent a Tent</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  {% if user.is_authenticated%}
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="Profile"><a class="nav-link" href="http://127.0.0.1:8000/user/profile/<slug:username>/">Profile</a></li>
+                  {% else %}
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="sign-up"><a class="nav-link" href="http://127.0.0.1:8000/user/register">Sign Up</a></li>
                         <li class="login"><a class="nav-link" href="http://127.0.0.1:8000/user/login#">Login</a></li>
+                  {% endif %}
                             </ul>
                         </li>
                     </ul>
@@ -29,7 +34,7 @@
         <!-- Page content-->
       <div class="container">
         <div class="list-group d-inline-flex float-end w-20 h-100 p-4">
-            <a href="http://127.0.0.1:8000/listings" class="list-group-item list-group-item-action" \>
+            <a href="http://127.0.0.1:8000/listings/all" class="list-group-item list-group-item-action" \>
               View Listings
             </a>
             <a href="http://127.0.0.1:8000/listings/new" class="list-group-item list-group-item-action">Create a Listing</a>
