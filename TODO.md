@@ -14,4 +14,5 @@ add profile search
 add listing search  
     |__ add listing filters by catagory, price, and location  
 fetch a users location  
-display listings only with a range of users location  
+display listings only with a range of users location   
+IMAGES BABY  
