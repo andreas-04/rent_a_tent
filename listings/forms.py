@@ -16,6 +16,7 @@ class ListingForm(ModelForm):
         'title', 
         'catagory', 
         'available_till',
+        'listing_imgs',
         'description',
         'price_per_day',
         ]

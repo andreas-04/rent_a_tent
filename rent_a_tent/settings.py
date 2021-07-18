@@ -52,6 +52,9 @@ STATIC_FILE_DIRS = [
     BASE_DIR / "rent_a_tent/static"
 ]
 
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

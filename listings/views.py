@@ -11,7 +11,7 @@ def new(request):
         return redirect('login')
     else:
         if request.method == 'POST':
-            form = ListingForm(request.POST)
+            form = ListingForm(request.POST, request.FILES)
             if form.is_valid():
                 form.save()
                 return redirect('homepage')
