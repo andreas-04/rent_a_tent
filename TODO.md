@@ -16,3 +16,8 @@ add listing search
 fetch a users location  
 display listings only with a range of users location   
 ~~IMAGES BABY~~    
+verify some image requiremnents  
+fix card height issue  
+"more" button on card when theres too much text  
+
+
