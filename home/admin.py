@@ -1,4 +1,6 @@
 from django.contrib import admin
-from .models import Listing
+from home import models
 # Register your models here.
-admin.site.register(Listing)
+@admin.register(models.Listing)
+class AuthorAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('title',), }
