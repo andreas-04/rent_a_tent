@@ -44,5 +44,5 @@ def logout_view(request):
 
 def getUserProfile(request, username):
     user = User.objects.get(username=username)
-    return render(request, 'profile.html', {"user":user})
+    return render(request, 'profile.html', {"user": user})
 

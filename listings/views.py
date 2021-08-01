@@ -2,6 +2,8 @@ from django.shortcuts import redirect, render
 from . forms import ListingForm
 from django.conf import settings
 from home.models import Listing
+from django.views.generic.detail import DetailView
+from django.shortcuts import get_object_or_404
 # Create your views here.
 def listings(request):
     return render(request, 'listings.html')
@@ -26,3 +28,10 @@ def getListingAll(request):
     listing = Listing.objects.all
     return render(request, 'all.html', {"listing":listing} )
 
+class listingDetailView(DetailView):
+    model = Listing
+    template_name = "listings/listing_detail.html"
+
+
+    def get_object(self, queryset=None):
+        return get_object_or_404(Listing, pk=self.kwargs.get('pk'))
