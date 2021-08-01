@@ -13,6 +13,7 @@ listing_description_choices = (
 
 class Listing(models.Model):
     title = models.CharField(max_length=150)
+    slug = models.SlugField(null = True)
     catagory = models.CharField(max_length=21, blank=True, null=True, choices = listing_description_choices)
     available_till = models.DateField('Available till')
     listing_imgs = models.ImageField(upload_to = 'images/')
