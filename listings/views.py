@@ -20,10 +20,6 @@ class IndexView(TemplateView):
 
 
 
-
-
-
-
 def listings(request):
     return render(request, 'listings.html')
 
@@ -47,7 +43,10 @@ def getListingAll(request):
 
 class listingDetailView(DetailView):
     model = Listing
-#    template_name = "listings/listing_detail.html"
+    template_name = "listing_detail.html"
 #
 #    def get_object(self, queryset=None):
 #        return get_object_or_404(Listing, pk=self.kwargs.get('pk'))
+
+
+#def categoryList(request, category_slug):

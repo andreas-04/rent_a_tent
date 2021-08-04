@@ -12,7 +12,8 @@ display listings only with a range of users location
 verify some image requiremnents  
 fix card height issue  
 "more" button on card when theres too much text  
-integrate with google maps api  
+integrate with google maps api   
+sort by catagory   
 
 
 ### Done  
